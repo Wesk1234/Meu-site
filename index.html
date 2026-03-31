@@ -1,0 +1,59 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Opinião</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pesquisa de Satisfação</h1>
+        <p>Sua opinião é muito importante para nós!</p>
+
+        <form action="#" method="POST">
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="campo">
+                <label>Como você avalia nosso serviço?</label>
+                <div class="options">
+                    <input type="radio" id="excelente" name="aval" value="excelente">
+                    <label for="excelente">Excelente</label>
+                    
+                    <input type="radio" id="bom" name="aval" value="bom">
+                    <label for="bom">Bom</label>
+                    
+                    <input type="radio" id="regular" name="aval" value="regular">
+                    <label for="regular">Regular</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>O que você mais gosta aqui?</label>
+                <div class="options">
+                    <input type="checkbox" id="atendimento" name="gosta" value="atendimento">
+                    <label for="atendimento">Atendimento</label>
+                    
+                    <input type="checkbox" id="preco" name="gosta" value="preco">
+                    <label for="preco">Preço</label>
+                    
+                    <input type="checkbox" id="qualidade" name="gosta" value="qualidade">
+                    <label for="qualidade">Qualidade</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="sugestoes">Sugestões ou Comentários:</label>
+                <textarea id="sugestoes" name="sugestoes" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Enviar Pesquisa</button>
+        </form>
+    </div>
+
+</body>
+</html>
