@@ -1,100 +1,60 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleta de Dados - Projeto Fictício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e9ecef;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
+    <div class="form-container">
+        <header>
+            <h2>Formulário de Cadastro Acadêmico</h2>
+            <p>Os dados coletados aqui são para fins de simulação e testes de sistema.</p>
+        </header>
 
-.form-container {
-    background: #ffffff;
-    max-width: 600px;
-    width: 100%;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
+        <form action="https://formspree.io/f/seu-codigo" method="POST">
+            
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required placeholder="Ex: João Silva">
+            </div>
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="contato@exemplo.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="idade">Idade</label>
+                    <input type="number" id="idade" name="idade" min="1" max="120">
+                </div>
+            </div>
 
-header h2 {
-    color: #2d3436;
-    margin-bottom: 10px;
-}
+            <div class="input-group">
+                <label for="categoria">Área de Interesse</label>
+                <select id="categoria" name="categoria">
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="esportes">Esportes</option>
+                    <option value="saude">Saúde</option>
+                    <option value="educacao">Educação</option>
+                </select>
+            </div>
 
-header p {
-    color: #636e72;
-    font-size: 0.9em;
-}
+            <div class="input-group">
+                <label>Frequência de Uso</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="frequencia" value="diario"> Diário</label>
+                    <label><input type="radio" name="frequencia" value="semanal"> Semanal</label>
+                    <label><input type="radio" name="frequencia" value="raramente"> Raramente</label>
+                </div>
+            </div>
 
-.input-group {
-    margin-bottom: 20px;
-}
+            <button type="submit" class="btn-enviar">Registrar Dados</button>
+        </form>
+    </div>
 
-.input-row {
-    display: flex;
-    gap: 15px;
-}
-
-.input-row .input-group {
-    flex: 1;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #444;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dfe6e9;
-    border-radius: 6px;
-    background-color: #f8f9fa;
-    transition: border 0.3s;
-}
-
-input:focus {
-    border-color: #0984e3;
-    outline: none;
-}
-
-.radio-group {
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.btn-enviar {
-    width: 100%;
-    padding: 15px;
-    background-color: #0984e3;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 10px;
-}
-
-.btn-enviar:hover {
-    background-color: #074b83;
-}
+</body>
+</html>
