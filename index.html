@@ -1,59 +1,100 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquisa de Opinião</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <div class="container">
-        <h1>Pesquisa de Satisfação</h1>
-        <p>Sua opinião é muito importante para nós!</p>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
 
-        <form action="#" method="POST">
-            <div class="campo">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-            </div>
+.form-container {
+    background: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
 
-            <div class="campo">
-                <label>Como você avalia nosso serviço?</label>
-                <div class="options">
-                    <input type="radio" id="excelente" name="aval" value="excelente">
-                    <label for="excelente">Excelente</label>
-                    
-                    <input type="radio" id="bom" name="aval" value="bom">
-                    <label for="bom">Bom</label>
-                    
-                    <input type="radio" id="regular" name="aval" value="regular">
-                    <label for="regular">Regular</label>
-                </div>
-            </div>
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-            <div class="campo">
-                <label>O que você mais gosta aqui?</label>
-                <div class="options">
-                    <input type="checkbox" id="atendimento" name="gosta" value="atendimento">
-                    <label for="atendimento">Atendimento</label>
-                    
-                    <input type="checkbox" id="preco" name="gosta" value="preco">
-                    <label for="preco">Preço</label>
-                    
-                    <input type="checkbox" id="qualidade" name="gosta" value="qualidade">
-                    <label for="qualidade">Qualidade</label>
-                </div>
-            </div>
+header h2 {
+    color: #2d3436;
+    margin-bottom: 10px;
+}
 
-            <div class="campo">
-                <label for="sugestoes">Sugestões ou Comentários:</label>
-                <textarea id="sugestoes" name="sugestoes" rows="4"></textarea>
-            </div>
+header p {
+    color: #636e72;
+    font-size: 0.9em;
+}
 
-            <button type="submit">Enviar Pesquisa</button>
-        </form>
-    </div>
+.input-group {
+    margin-bottom: 20px;
+}
 
-</body>
-</html>
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-row .input-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #0984e3;
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #074b83;
+}
